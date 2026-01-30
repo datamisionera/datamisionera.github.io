@@ -4,21 +4,42 @@
     <meta charset="UTF-8">
     <title>Data Misionera</title>
 
-    <!-- Tipografía del logo -->
+    <!-- Tipografía Cubao Wide -->
     <link href="https://fonts.googleapis.com/css2?family=Cubao+Wide&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            background-color: #000000;
+            background-color: #000;
             color: #eaeaea;
             font-family: Arial, sans-serif;
+        }
+
+        /* CINTA DE ÚLTIMAS NOTICIAS */
+        .ticker {
+            background-color: #000;
+            border-bottom: 2px solid #87E822;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 20s linear infinite;
+            color: #87E822;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
         }
 
         header {
             text-align: center;
             padding: 25px 15px;
-            border-bottom: 2px solid #87E822;
         }
 
         header img {
@@ -39,7 +60,7 @@
             justify-content: center;
             gap: 18px;
             padding: 15px 10px;
-            background-color: #111111;
+            background-color: #111;
         }
 
         nav a {
@@ -47,10 +68,6 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 0.95rem;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
         }
 
         main {
@@ -78,7 +95,7 @@
         article h3 {
             font-size: 1.4rem;
             font-weight: bold;
-            color: #ffffff;
+            color: #fff;
             margin-bottom: 5px;
         }
 
@@ -100,13 +117,22 @@
 
 <body>
 
+<!-- CINTA DE ÚLTIMAS NOTICIAS -->
+<div class="ticker">
+    <span>
+        🔴 ÚLTIMAS | Alerta por calor extremo en Misiones · 
+        Tormentas aisladas hacia el sur provincial · 
+        Sensación térmica superior a 40°C · 
+        Se mantiene la ola de calor durante la semana
+    </span>
+</div>
+
 <header>
     <img src="logodatamisionera.jpeg" alt="Logo Data Misionera">
     <h1>DATA MISIONERA</h1>
 </header>
 
 <nav>
-    <a href="#">Últimas noticias</a>
     <a href="#">Clima</a>
     <a href="#">Locales</a>
     <a href="#">Provinciales</a>
@@ -121,25 +147,16 @@
 <main>
 
     <div class="bloque">
-        <h2>Últimas noticias</h2>
-
-        <article>
-            <h3>Alerta por calor extremo en Misiones</h3>
-            <p>Las temperaturas podrían superar los 38°C durante el fin de semana.</p>
-        </article>
-
-        <article>
-            <h3>Probabilidad de tormentas aisladas</h3>
-            <p>Se esperan lluvias intensas en zonas del sur provincial.</p>
-        </article>
-    </div>
-
-    <div class="bloque">
         <h2>Clima</h2>
 
         <article>
+            <h3>Alerta por calor extremo</h3>
+            <p>Las temperaturas podrían superar los 38°C en gran parte de Misiones.</p>
+        </article>
+
+        <article>
             <h3>Pronóstico semanal</h3>
-            <p>Altas temperaturas, humedad elevada y chaparrones aislados.</p>
+            <p>Calor persistente, humedad elevada y chaparrones aislados.</p>
         </article>
     </div>
 
