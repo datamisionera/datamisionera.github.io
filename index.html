@@ -5,37 +5,43 @@
   <title>Data Misionera</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background-color: #000;
-      color: #353535;
+      font-family: 'Roboto', sans-serif;
+      color: #ccc;
     }
 
     header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 25px;
       border-bottom: 1px solid #87E822;
-      padding: 20px;
-      text-align: center;
+    }
+
+    header img {
+      height: 50px;
     }
 
     header h1 {
-      color: #87E822;
       margin: 0;
+      font-family: 'Oswald', sans-serif;
+      color: #87E822;
       letter-spacing: 3px;
-    }
-
-    header p {
-      margin: 5px 0 0;
-      font-size: 14px;
-      color: #aaa;
+      font-size: 32px;
     }
 
     nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 18px;
       padding: 15px;
       border-bottom: 1px solid #222;
     }
@@ -43,12 +49,40 @@
     nav a {
       color: #fff;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13px;
       text-transform: uppercase;
     }
 
     nav a:hover {
       color: #87E822;
+    }
+
+    /* TICKER */
+    .ticker {
+      background: #000;
+      border-top: 1px solid #87E822;
+      border-bottom: 1px solid #87E822;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .ticker-text {
+      display: inline-block;
+      padding: 10px 0;
+      color: #87E822;
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      animation: tickerMove 25s linear infinite;
+    }
+
+    .ticker-text span {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    @keyframes tickerMove {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
     main {
@@ -61,12 +95,12 @@
       margin-bottom: 50px;
     }
 
-    section h2 {
+    h2 {
+      font-family: 'Oswald', sans-serif;
       color: #87E822;
       border-left: 4px solid #87E822;
       padding-left: 10px;
       text-transform: uppercase;
-      font-size: 20px;
     }
 
     article {
@@ -79,6 +113,7 @@
     article h3 {
       margin-top: 0;
       color: #fff;
+      font-family: 'Oswald', sans-serif;
     }
 
     article p {
@@ -100,11 +135,13 @@
 <body>
 
 <header>
+  <!-- Subí tu logo con fondo negro como logo.png -->
+  <img src="logo.png" alt="Data Misionera">
   <h1>DATA MISIONERA</h1>
-  <p>Diario digital misionero</p>
 </header>
 
 <nav>
+  <a href="#ultimas">Últimas</a>
   <a href="#clima">Clima</a>
   <a href="#locales">Locales</a>
   <a href="#provinciales">Provinciales</a>
@@ -116,90 +153,46 @@
   <a href="#opinion">Opinión</a>
 </nav>
 
+<!-- TICKER ÚLTIMAS -->
+<div class="ticker">
+  <div class="ticker-text">
+    <span>ÚLTIMAS:</span>
+    Alerta por altas temperaturas en Misiones ·
+    Pronóstico inestable para el fin de semana ·
+    Sensación térmica extrema en el norte provincial ·
+    Economía regional en alerta ·
+  </div>
+</div>
+
 <main>
 
-  <!-- CLIMA - PRIORIDAD -->
+  <section id="ultimas">
+    <h2>Últimas noticias</h2>
+
+    <article>
+      <h3>Alerta por calor extremo en Misiones</h3>
+      <p>Se esperan temperaturas elevadas y alta sensación térmica en toda la provincia.</p>
+    </article>
+
+    <article>
+      <h3>Posibles tormentas aisladas durante el fin de semana</h3>
+      <p>El pronóstico indica inestabilidad en distintos puntos del territorio misionero.</p>
+    </article>
+  </section>
+
   <section id="clima">
     <h2>Clima</h2>
 
     <article>
-      <h3>Pronóstico para Misiones</h3>
-      <p>
-        Jornada calurosa en gran parte de la provincia, con probabilidad de lluvias
-        aisladas hacia la tarde. Se esperan temperaturas máximas elevadas y alta
-        sensación térmica.
-      </p>
-    </article>
-  </section>
-
-  <section id="locales">
-    <h2>Locales</h2>
-    <article>
-      <h3>Noticias locales</h3>
-      <p>Información relevante de cada municipio misionero.</p>
-    </article>
-  </section>
-
-  <section id="provinciales">
-    <h2>Provinciales</h2>
-    <article>
-      <h3>Actualidad provincial</h3>
-      <p>Políticas públicas, gestión y temas centrales de Misiones.</p>
-    </article>
-  </section>
-
-  <section id="nacionales">
-    <h2>Nacionales</h2>
-    <article>
-      <h3>Panorama nacional</h3>
-      <p>Las principales noticias del país.</p>
-    </article>
-  </section>
-
-  <section id="economia">
-    <h2>Economía</h2>
-    <article>
-      <h3>Economía regional y nacional</h3>
-      <p>Análisis económico con foco en Misiones.</p>
-    </article>
-  </section>
-
-  <section id="politica">
-    <h2>Política</h2>
-    <article>
-      <h3>Política y poder</h3>
-      <p>Seguimiento de la política local, provincial y nacional.</p>
-    </article>
-  </section>
-
-  <section id="juventud">
-    <h2>Juventud</h2>
-    <article>
-      <h3>Voces jóvenes</h3>
-      <p>Participación, educación y realidades juveniles.</p>
-    </article>
-  </section>
-
-  <section id="turismo">
-    <h2>Turismo</h2>
-    <article>
-      <h3>Destino Misiones</h3>
-      <p>Naturaleza, cultura y propuestas turísticas.</p>
-    </article>
-  </section>
-
-  <section id="opinion">
-    <h2>Artículos de opinión</h2>
-    <article>
-      <h3>Opinión</h3>
-      <p>Columnas y análisis con mirada crítica.</p>
+      <h3>Pronóstico general</h3>
+      <p>Jornada calurosa, con probabilidad de lluvias hacia la tarde y noche.</p>
     </article>
   </section>
 
 </main>
 
 <footer>
-  © 2026 · Data Misionera — Periodismo digital independiente
+  © 2026 · Data Misionera — Diario digital misionero
 </footer>
 
 </body>
