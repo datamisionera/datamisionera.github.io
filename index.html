@@ -7,73 +7,200 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f6f5;
-      color: #1f2d27;
       margin: 0;
-      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+      color: #353535;
     }
 
     header {
-      background-color: #0f5132;
-      color: white;
-      padding: 25px;
+      border-bottom: 1px solid #87E822;
+      padding: 20px;
       text-align: center;
+    }
+
+    header h1 {
+      color: #87E822;
+      margin: 0;
+      letter-spacing: 3px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 15px;
+      border-bottom: 1px solid #222;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: #87E822;
     }
 
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 25px;
-      background: white;
+      padding: 20px;
     }
 
-    h1 {
-      margin: 0;
-      letter-spacing: 2px;
+    section {
+      margin-bottom: 50px;
     }
 
-    h2 {
-      color: #0f5132;
+    section h2 {
+      color: #87E822;
+      border-left: 4px solid #87E822;
+      padding-left: 10px;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+
+    article {
+      background-color: #111;
+      padding: 20px;
+      margin-top: 20px;
+      border-left: 3px solid #87E822;
+    }
+
+    article h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    article p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #ccc;
     }
 
     footer {
+      border-top: 1px solid #222;
       text-align: center;
-      font-size: 14px;
+      padding: 20px;
+      font-size: 13px;
       color: #666;
-      margin: 30px 0;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>DATA MISIONERA</h1>
-    <p>Diario digital misionero</p>
-  </header>
+<header>
+  <h1>DATA MISIONERA</h1>
+  <p>Diario digital misionero</p>
+</header>
 
-  <main>
-    <h2>¿Qué es Data Misionera?</h2>
-    <p>
-      Data Misionera es un espacio de información clara, análisis y datos
-      sobre la realidad social, política y ambiental de la provincia de Misiones.
-    </p>
+<nav>
+  <a href="#clima">Clima</a>
+  <a href="#locales">Locales</a>
+  <a href="#provinciales">Provinciales</a>
+  <a href="#nacionales">Nacionales</a>
+  <a href="#economia">Economía</a>
+  <a href="#politica">Política</a>
+  <a href="#juventud">Juventud</a>
+  <a href="#turismo">Turismo</a>
+  <a href="#opinion">Opinión</a>
+</nav>
 
-    <h2>Qué vas a encontrar</h2>
-    <ul>
-      <li>📊 Informes y datos públicos</li>
-      <li>📰 Notas de actualidad</li>
-      <li>🌱 Ambiente y territorio</li>
-      <li>🏛️ Política local</li>
-    </ul>
+<main>
 
-    <p><strong>Próximamente:</strong> informes especiales y visualizaciones.</p>
-  </main>
+  <!-- CLIMA - PRIORIDAD -->
+  <section id="clima">
+    <h2>Clima</h2>
 
-  <footer>
-    © 2026 · Data Misionera
-  </footer>
+    <article>
+      <h3>Pronóstico para Misiones</h3>
+      <p>
+        Jornada calurosa en gran parte de la provincia, con probabilidad de lluvias
+        aisladas hacia la tarde. Se esperan temperaturas máximas elevadas y alta
+        sensación térmica.
+      </p>
+    </article>
+  </section>
+
+  <section id="locales">
+    <h2>Locales</h2>
+    <article>
+      <h3>Noticias locales</h3>
+      <p>Información relevante de cada municipio misionero.</p>
+    </article>
+  </section>
+
+  <section id="provinciales">
+    <h2>Provinciales</h2>
+    <article>
+      <h3>Actualidad provincial</h3>
+      <p>Políticas públicas, gestión y temas centrales de Misiones.</p>
+    </article>
+  </section>
+
+  <section id="nacionales">
+    <h2>Nacionales</h2>
+    <article>
+      <h3>Panorama nacional</h3>
+      <p>Las principales noticias del país.</p>
+    </article>
+  </section>
+
+  <section id="economia">
+    <h2>Economía</h2>
+    <article>
+      <h3>Economía regional y nacional</h3>
+      <p>Análisis económico con foco en Misiones.</p>
+    </article>
+  </section>
+
+  <section id="politica">
+    <h2>Política</h2>
+    <article>
+      <h3>Política y poder</h3>
+      <p>Seguimiento de la política local, provincial y nacional.</p>
+    </article>
+  </section>
+
+  <section id="juventud">
+    <h2>Juventud</h2>
+    <article>
+      <h3>Voces jóvenes</h3>
+      <p>Participación, educación y realidades juveniles.</p>
+    </article>
+  </section>
+
+  <section id="turismo">
+    <h2>Turismo</h2>
+    <article>
+      <h3>Destino Misiones</h3>
+      <p>Naturaleza, cultura y propuestas turísticas.</p>
+    </article>
+  </section>
+
+  <section id="opinion">
+    <h2>Artículos de opinión</h2>
+    <article>
+      <h3>Opinión</h3>
+      <p>Columnas y análisis con mirada crítica.</p>
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 · Data Misionera — Periodismo digital independiente
+</footer>
 
 </body>
 </html>
