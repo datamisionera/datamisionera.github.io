@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <title>Data Misionera</title>
 
-    <!-- Tipografía Cubao Wide -->
+    <!-- Tipografía del logo -->
     <link href="https://fonts.googleapis.com/css2?family=Cubao+Wide&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
-            background-color: #000;
-            color: #e0e0e0;
+            background-color: #000000;
+            color: #eaeaea;
             font-family: Arial, sans-serif;
         }
 
         header {
             text-align: center;
-            padding: 30px 20px;
+            padding: 25px 15px;
             border-bottom: 2px solid #87E822;
         }
 
         header img {
-            max-width: 120px;
-            margin-bottom: 15px;
+            max-width: 140px;
+            margin-bottom: 10px;
         }
 
         header h1 {
@@ -37,9 +37,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            padding: 15px;
-            background-color: #111;
+            gap: 18px;
+            padding: 15px 10px;
+            background-color: #111111;
         }
 
         nav a {
@@ -53,26 +53,26 @@
             text-decoration: underline;
         }
 
-        section {
+        main {
             max-width: 900px;
             margin: auto;
             padding: 30px 20px;
         }
 
-        .destacado {
-            border-left: 4px solid #87E822;
-            padding-left: 15px;
+        .bloque {
             margin-bottom: 40px;
         }
 
-        h2 {
+        .bloque h2 {
             color: #87E822;
             font-size: 2rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #87E822;
+            padding-left: 12px;
         }
 
         article {
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
 
         article h3 {
@@ -84,7 +84,7 @@
 
         article p {
             font-size: 1rem;
-            color: #bfbfbf;
+            color: #bdbdbd;
             margin: 0;
         }
 
@@ -92,8 +92,8 @@
             text-align: center;
             padding: 20px;
             border-top: 1px solid #222;
-            font-size: 0.9rem;
             color: #777;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -101,9 +101,7 @@
 <body>
 
 <header>
-    <!-- LOGO -->
-    <img src="logo.png" alt="Logo Data Misionera">
-
+    <img src="logodatamisionera.jpeg" alt="Logo Data Misionera">
     <h1>DATA MISIONERA</h1>
 </header>
 
@@ -120,28 +118,32 @@
     <a href="#">Opinión</a>
 </nav>
 
-<section class="destacado">
-    <h2>Últimas noticias</h2>
+<main>
 
-    <article>
-        <h3>Alerta por altas temperaturas en Misiones</h3>
-        <p>Se esperan máximas superiores a los 38°C en varias localidades.</p>
-    </article>
+    <div class="bloque">
+        <h2>Últimas noticias</h2>
 
-    <article>
-        <h3>Tormentas aisladas hacia el sur de la provincia</h3>
-        <p>El Servicio Meteorológico advierte lluvias intensas en la tarde.</p>
-    </article>
-</section>
+        <article>
+            <h3>Alerta por calor extremo en Misiones</h3>
+            <p>Las temperaturas podrían superar los 38°C durante el fin de semana.</p>
+        </article>
 
-<section>
-    <h2>Clima</h2>
+        <article>
+            <h3>Probabilidad de tormentas aisladas</h3>
+            <p>Se esperan lluvias intensas en zonas del sur provincial.</p>
+        </article>
+    </div>
 
-    <article>
-        <h3>Pronóstico semanal</h3>
-        <p>Calor persistente, humedad elevada y probabilidad de chaparrones.</p>
-    </article>
-</section>
+    <div class="bloque">
+        <h2>Clima</h2>
+
+        <article>
+            <h3>Pronóstico semanal</h3>
+            <p>Altas temperaturas, humedad elevada y chaparrones aislados.</p>
+        </article>
+    </div>
+
+</main>
 
 <footer>
     © 2026 · Data Misionera · Información pública
