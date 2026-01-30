@@ -1,198 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Data Misionera</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Data Misionera</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Tipografía Cubao Wide -->
+    <link href="https://fonts.googleapis.com/css2?family=Cubao+Wide&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      font-family: 'Roboto', sans-serif;
-      color: #ccc;
-    }
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+        }
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      padding: 25px;
-      border-bottom: 1px solid #87E822;
-    }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 2px solid #87E822;
+        }
 
-    header img {
-      height: 50px;
-    }
+        header img {
+            max-width: 120px;
+            margin-bottom: 15px;
+        }
 
-    header h1 {
-      margin: 0;
-      font-family: 'Oswald', sans-serif;
-      color: #87E822;
-      letter-spacing: 3px;
-      font-size: 32px;
-    }
+        header h1 {
+            font-family: 'Cubao Wide', cursive;
+            color: #87E822;
+            font-size: 3rem;
+            margin: 0;
+        }
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 18px;
-      padding: 15px;
-      border-bottom: 1px solid #222;
-    }
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: #111;
+        }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 13px;
-      text-transform: uppercase;
-    }
+        nav a {
+            color: #87E822;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
 
-    nav a:hover {
-      color: #87E822;
-    }
+        nav a:hover {
+            text-decoration: underline;
+        }
 
-    /* TICKER */
-    .ticker {
-      background: #000;
-      border-top: 1px solid #87E822;
-      border-bottom: 1px solid #87E822;
-      overflow: hidden;
-      white-space: nowrap;
-    }
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
 
-    .ticker-text {
-      display: inline-block;
-      padding: 10px 0;
-      color: #87E822;
-      font-family: 'Oswald', sans-serif;
-      font-size: 14px;
-      animation: tickerMove 25s linear infinite;
-    }
+        .destacado {
+            border-left: 4px solid #87E822;
+            padding-left: 15px;
+            margin-bottom: 40px;
+        }
 
-    .ticker-text span {
-      font-weight: bold;
-      margin-right: 10px;
-    }
+        h2 {
+            color: #87E822;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
 
-    @keyframes tickerMove {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
+        article {
+            margin-bottom: 25px;
+        }
 
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-    }
+        article h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
 
-    section {
-      margin-bottom: 50px;
-    }
+        article p {
+            font-size: 1rem;
+            color: #bfbfbf;
+            margin: 0;
+        }
 
-    h2 {
-      font-family: 'Oswald', sans-serif;
-      color: #87E822;
-      border-left: 4px solid #87E822;
-      padding-left: 10px;
-      text-transform: uppercase;
-    }
-
-    article {
-      background-color: #111;
-      padding: 20px;
-      margin-top: 20px;
-      border-left: 3px solid #87E822;
-    }
-
-    article h3 {
-      margin-top: 0;
-      color: #fff;
-      font-family: 'Oswald', sans-serif;
-    }
-
-    article p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #ccc;
-    }
-
-    footer {
-      border-top: 1px solid #222;
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: #666;
-    }
-  </style>
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #222;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <!-- Subí tu logo con fondo negro como logo.png -->
-  <img src="logo.png" alt="Data Misionera">
-  <h1>DATA MISIONERA</h1>
+    <!-- LOGO -->
+    <img src="logo.png" alt="Logo Data Misionera">
+
+    <h1>DATA MISIONERA</h1>
 </header>
 
 <nav>
-  <a href="#ultimas">Últimas</a>
-  <a href="#clima">Clima</a>
-  <a href="#locales">Locales</a>
-  <a href="#provinciales">Provinciales</a>
-  <a href="#nacionales">Nacionales</a>
-  <a href="#economia">Economía</a>
-  <a href="#politica">Política</a>
-  <a href="#juventud">Juventud</a>
-  <a href="#turismo">Turismo</a>
-  <a href="#opinion">Opinión</a>
+    <a href="#">Últimas noticias</a>
+    <a href="#">Clima</a>
+    <a href="#">Locales</a>
+    <a href="#">Provinciales</a>
+    <a href="#">Nacionales</a>
+    <a href="#">Economía</a>
+    <a href="#">Política</a>
+    <a href="#">Juventud</a>
+    <a href="#">Turismo</a>
+    <a href="#">Opinión</a>
 </nav>
 
-<!-- TICKER ÚLTIMAS -->
-<div class="ticker">
-  <div class="ticker-text">
-    <span>ÚLTIMAS:</span>
-    Alerta por altas temperaturas en Misiones ·
-    Pronóstico inestable para el fin de semana ·
-    Sensación térmica extrema en el norte provincial ·
-    Economía regional en alerta ·
-  </div>
-</div>
-
-<main>
-
-  <section id="ultimas">
+<section class="destacado">
     <h2>Últimas noticias</h2>
 
     <article>
-      <h3>Alerta por calor extremo en Misiones</h3>
-      <p>Se esperan temperaturas elevadas y alta sensación térmica en toda la provincia.</p>
+        <h3>Alerta por altas temperaturas en Misiones</h3>
+        <p>Se esperan máximas superiores a los 38°C en varias localidades.</p>
     </article>
 
     <article>
-      <h3>Posibles tormentas aisladas durante el fin de semana</h3>
-      <p>El pronóstico indica inestabilidad en distintos puntos del territorio misionero.</p>
+        <h3>Tormentas aisladas hacia el sur de la provincia</h3>
+        <p>El Servicio Meteorológico advierte lluvias intensas en la tarde.</p>
     </article>
-  </section>
+</section>
 
-  <section id="clima">
+<section>
     <h2>Clima</h2>
 
     <article>
-      <h3>Pronóstico general</h3>
-      <p>Jornada calurosa, con probabilidad de lluvias hacia la tarde y noche.</p>
+        <h3>Pronóstico semanal</h3>
+        <p>Calor persistente, humedad elevada y probabilidad de chaparrones.</p>
     </article>
-  </section>
-
-</main>
+</section>
 
 <footer>
-  © 2026 · Data Misionera — Diario digital misionero
+    © 2026 · Data Misionera · Información pública
 </footer>
 
 </body>
