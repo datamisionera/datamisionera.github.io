@@ -1,191 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data Misionera</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Fuentes -->
-<link href="https://fonts.googleapis.com/css2?family=Cubao+Wide&family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <title>Data Misionera</title>
 
-<style>
-body {
-    margin: 0;
-    background-color: #000;
-    color: #eaeaea;
-    font-family: 'Inter', Arial, sans-serif;
-}
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-/* CINTA */
-.ticker {
-    background: #000;
-    border-bottom: 2px solid #87E822;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.ticker span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: ticker 22s linear infinite;
-    color: #87E822;
-    font-weight: 600;
-}
-@keyframes ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-/* HEADER */
-header {
-    text-align: center;
-    padding: 25px 15px;
-}
-header img {
-    max-width: 120px;
-    margin-bottom: 10px;
-}
-header h1 {
-    font-family: 'Cubao Wide', cursive;
-    color: #87E822;
-    margin: 0;
-    font-size: 2.6rem;
-}
-
-/* NAV */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-    padding: 12px;
-    background: #111;
-}
-nav a {
-    color: #87E822;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-}
-
-/* CONTENIDO */
-main {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px 15px;
-}
-
-/* CLIMA */
-.clima {
-    background: #0f0f0f;
-    border-left: 4px solid #87E822;
-    padding: 20px;
-    margin-bottom: 40px;
-}
-.clima h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #87E822;
-    margin-top: 0;
-}
-.clima p {
-    margin: 5px 0;
-    font-size: 1.05rem;
-}
-
-/* BLOQUES */
-.bloque {
-    margin-bottom: 40px;
-}
-.bloque h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #87E822;
-    font-size: 1.8rem;
-    border-left: 4px solid #87E822;
-    padding-left: 10px;
-}
-
-/* ARTICULOS */
-article {
-    margin-bottom: 20px;
-}
-article h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    margin-bottom: 4px;
-    color: #fff;
-}
-article p {
-    font-size: 1rem;
-    color: #bdbdbd;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #222;
-    font-size: 0.85rem;
-    color: #777;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2.1rem;
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      font-family: 'Inter', sans-serif;
     }
-}
-</style>
+
+    /* Barra superior */
+    .top-bar {
+      background: #000;
+      color: #87E822;
+      font-size: 14px;
+      padding: 8px 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #87E822;
+    }
+
+    /* Portada */
+    .hero {
+      background: url('selva.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      width: 90px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 42px;
+      letter-spacing: 2px;
+      margin: 0;
+      color: #87E822;
+    }
+
+    /* Menú */
+    nav {
+      background: #111;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #87E822;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="ticker">
-<span>🔴 ÚLTIMAS | Ola de calor extremo en Misiones · Tormentas aisladas en zona sur · Sensación térmica superior a 40°</span>
-</div>
+  <!-- CONTACTO -->
+  <div class="top-bar">
+    <div>📱 WhatsApp: 3743 592013</div>
+    <div>Instagram · Facebook</div>
+  </div>
 
-<header>
-<img src="logodatamisionera.jpeg" alt="Data Misionera">
-<h1>DATA MISIONERA</h1>
-</header>
+  <!-- PORTADA -->
+  <div class="hero">
+    <img src="logodatamisionera.jpeg" alt="Logo Data Misionera">
+    <h1>DATA MISIONERA</h1>
+  </div>
 
-<nav>
-<a href="#">Clima</a>
-<a href="#">Locales</a>
-<a href="#">Provinciales</a>
-<a href="#">Nacionales</a>
-<a href="#">Economía</a>
-<a href="#">Política</a>
-<a href="#">Juventud</a>
-<a href="#">Turismo</a>
-<a href="#">Opinión</a>
-</nav>
-
-<main>
-
-<section class="clima">
-<h2>🌡️ Clima en Misiones</h2>
-<p><strong>Hoy:</strong> 38°C | Sensación térmica 41°C</p>
-<p>Tormentas aisladas hacia la tarde</p>
-</section>
-
-<section class="bloque">
-<h2>Noticias destacadas</h2>
-
-<article>
-<h3>Alerta roja por temperaturas extremas</h3>
-<p>El Servicio Meteorológico advierte riesgo para la salud.</p>
-</article>
-
-<article>
-<h3>Continúa la ola de calor durante la semana</h3>
-<p>No se esperan descensos significativos de temperatura.</p>
-</article>
-</section>
-
-</main>
-
-<footer>
-© 2026 · Data Misionera · Diario digital
-</footer>
+  <!-- MENÚ -->
+  <nav>
+    <a href="#">Clima</a>
+    <a href="#">Locales</a>
+    <a href="#">Provinciales</a>
+    <a href="#">Nacionales</a>
+    <a href="#">Economía</a>
+    <a href="#">Política</a>
+    <a href="#">Juventud</a>
+    <a href="#">Turismo</a>
+    <a href="#">Opinión</a>
+  </nav>
 
 </body>
 </html>
