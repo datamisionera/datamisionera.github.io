@@ -1,98 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Data Misionera</title>
+<title>Data Misionera</title>
 
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- GOOGLE FONT GRUESA Y FIJA -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      background: black;
-      color: white;
-      font-family: 'Inter', sans-serif;
+<style>
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* COLORES */
+:root {
+    --verde: #87E822;
+}
+
+/* CONTACTO */
+.top-bar {
+    background: #000;
+    color: var(--verde);
+    padding: 8px 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--verde);
+}
+
+/* PORTADA */
+.header {
+    background: url('selva.jpg') center/cover no-repeat;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header img {
+    width: 80px;
+}
+
+.header h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    color: var(--verde);
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #111;
+    padding: 10px;
+}
+
+.menu a {
+    color: var(--verde);
+    text-decoration: none;
+    margin: 8px 15px;
+    font-weight: bold;
+}
+
+/* ULTIMAS */
+.ticker {
+    background: #000;
+    border-top: 2px solid var(--verde);
+    border-bottom: 2px solid var(--verde);
+    overflow: hidden;
+}
+
+.ticker p {
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+    padding: 10px;
+}
+
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* CONTENIDO */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.main {
+    flex: 3;
+    padding-right: 20px;
+}
+
+.sidebar {
+    flex: 1;
+}
+
+/* CAJAS */
+.box {
+    background: #111;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--verde);
+}
+
+.box h2 {
+    color: var(--verde);
+}
+
+/* PUBLICIDAD */
+.ad {
+    background: #222;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--verde);
+}
+
+footer img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 768px) {
+    .container {
+        flex-direction: column;
     }
-
-    /* Barra superior */
-    .top-bar {
-      background: #000;
-      color: #87E822;
-      font-size: 14px;
-      padding: 8px 15px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #87E822;
+    .main {
+        padding-right: 0;
     }
-
-    /* Portada */
-    .hero {
-      background: url('selva.jpg') center/cover no-repeat;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero img {
-      width: 90px;
-      margin-bottom: 10px;
-    }
-
-    .hero h1 {
-      font-family: 'Anton', sans-serif;
-      font-size: 42px;
-      letter-spacing: 2px;
-      margin: 0;
-      color: #87E822;
-    }
-
-    /* Menú */
-    nav {
-      background: #111;
-      padding: 12px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #87E822;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <!-- CONTACTO -->
-  <div class="top-bar">
-    <div>📱 WhatsApp: 3743 592013</div>
-    <div>Instagram · Facebook</div>
-  </div>
+<!-- CONTACTO -->
+<div class="top-bar">
+    <span>📲 WhatsApp: 3743 592013</span>
+    <span>📸 Instagram: @datamisionera</span>
+</div>
 
-  <!-- PORTADA -->
-  <div class="hero">
-    <img src="logodatamisionera.jpeg" alt="Logo Data Misionera">
+<!-- PORTADA -->
+<div class="header">
+    <img src="logodatamisionera.jpeg" alt="Logo">
     <h1>DATA MISIONERA</h1>
-  </div>
+</div>
 
-  <!-- MENÚ -->
-  <nav>
+<!-- MENU -->
+<div class="menu">
     <a href="#">Clima</a>
     <a href="#">Locales</a>
     <a href="#">Provinciales</a>
@@ -102,7 +173,67 @@
     <a href="#">Juventud</a>
     <a href="#">Turismo</a>
     <a href="#">Opinión</a>
-  </nav>
+</div>
+
+<!-- ULTIMAS -->
+<div class="ticker">
+    <p>🔴 ÚLTIMAS | Ola de calor extremo en Misiones | Alerta sanitaria | Cortes de energía en varias localidades</p>
+</div>
+
+<!-- CONTENIDO -->
+<div class="container">
+
+<!-- PRINCIPAL -->
+<div class="main">
+
+<div class="box">
+<h2>☀️ Clima en Misiones</h2>
+<p id="clima">Cargando clima...</p>
+</div>
+
+<div class="box">
+<h2>📰 Noticias recientes</h2>
+<p><strong>Alerta roja por temperaturas extremas</strong></p>
+<p>El Servicio Meteorológico Nacional advirtió riesgo para la salud.</p>
+</div>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+<div class="box">
+<h2>🔥 Más leídas</h2>
+<ul>
+<li>Ola de calor histórica</li>
+<li>Cortes de luz en Misiones</li>
+<li>Suba de precios</li>
+</ul>
+</div>
+
+<div class="ad">
+ESPACIO PUBLICITARIO
+</div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<img src="logodatamisionera.jpeg">
+<p>@datamisionera · WhatsApp 3743 592013</p>
+<p>© Data Misionera</p>
+</footer>
+
+<!-- CLIMA AUTOMÁTICO -->
+<script>
+fetch("https://api.open-meteo.com/v1/forecast?latitude=-27.45&longitude=-55.90&current_weather=true")
+.then(res => res.json())
+.then(data => {
+document.getElementById("clima").innerHTML =
+`${data.current_weather.temperature}°C · Viento ${data.current_weather.windspeed} km/h`;
+});
+</script>
 
 </body>
 </html>
