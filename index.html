@@ -1,169 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Data Misionera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data Misionera</title>
+  <!-- FUENTE SÓLIDA, NO CAMBIA EN CELU -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
-<!-- GOOGLE FONT GRUESA Y FIJA -->
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-<style>
-body {
-    margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-}
+    /* BARRA SUPERIOR */
+    .top-bar {
+      background: #000;
+      border-bottom: 2px solid #87E822;
+      padding: 8px 15px;
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      color: #87E822;
+    }
 
-/* COLORES */
-:root {
-    --verde: #87E822;
-}
+    /* CINTA ÚLTIMAS */
+    .ticker {
+      background: #111;
+      border-bottom: 2px solid #87E822;
+      padding: 8px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
 
-/* CONTACTO */
-.top-bar {
-    background: #000;
-    color: var(--verde);
-    padding: 8px 20px;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--verde);
-}
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 18s linear infinite;
+      color: #87E822;
+      font-weight: 700;
+    }
 
-/* PORTADA */
-.header {
-    background: url('selva.jpg') center/cover no-repeat;
-    text-align: center;
-    padding: 50px 20px;
-}
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
 
-.header img {
-    width: 80px;
-}
+    /* PORTADA */
+    .hero {
+      background: url("selva.jpg") center/cover no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-.header h1 {
-    font-family: 'Anton', sans-serif;
-    font-size: 48px;
-    color: var(--verde);
-    margin: 10px 0;
-    letter-spacing: 2px;
-}
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #87E822;
+      text-shadow: 0 0 10px #000;
+    }
 
-/* MENU */
-.menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: #111;
-    padding: 10px;
-}
+    /* MENU */
+    nav {
+      background: #111;
+      padding: 12px;
+      text-align: center;
+    }
 
-.menu a {
-    color: var(--verde);
-    text-decoration: none;
-    margin: 8px 15px;
-    font-weight: bold;
-}
+    nav a {
+      color: #87E822;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
 
-/* ULTIMAS */
-.ticker {
-    background: #000;
-    border-top: 2px solid var(--verde);
-    border-bottom: 2px solid var(--verde);
-    overflow: hidden;
-}
-
-.ticker p {
-    white-space: nowrap;
-    animation: scroll 20s linear infinite;
-    padding: 10px;
-}
-
-@keyframes scroll {
-    from { transform: translateX(100%); }
-    to { transform: translateX(-100%); }
-}
-
-/* CONTENIDO */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.main {
-    flex: 3;
-    padding-right: 20px;
-}
-
-.sidebar {
-    flex: 1;
-}
-
-/* CAJAS */
-.box {
-    background: #111;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--verde);
-}
-
-.box h2 {
-    color: var(--verde);
-}
-
-/* PUBLICIDAD */
-.ad {
-    background: #222;
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 20px;
-    color: #aaa;
-}
-
-/* FOOTER */
-footer {
-    background: #000;
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid var(--verde);
-}
-
-footer img {
-    width: 60px;
-    margin-bottom: 10px;
-}
-
-@media(max-width: 768px) {
+    /* CONTENIDO */
     .container {
-        flex-direction: column;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
     }
-    .main {
-        padding-right: 0;
+
+    /* CLIMA */
+    .clima-box {
+      background: #111;
+      border-left: 4px solid #87E822;
+      padding: 15px;
+      margin-bottom: 30px;
+      max-width: 400px;
     }
-}
-</style>
+
+    .clima-box h3 {
+      color: #87E822;
+      margin-bottom: 10px;
+    }
+
+    /* TITULOS */
+    h2 {
+      color: #87E822;
+      border-left: 4px solid #87E822;
+      padding-left: 10px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #111;
+      text-align: center;
+    }
+
+    footer img {
+      width: 120px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- CONTACTO -->
-<div class="top-bar">
-    <span>📲 WhatsApp: 3743 592013</span>
-    <span>📸 Instagram: @datamisionera</span>
-</div>
+  <!-- CONTACTO -->
+  <div class="top-bar">
+    <div>📱 WhatsApp: 3743-592013</div>
+    <div>Instagram: @datamisionera</div>
+  </div>
 
-<!-- PORTADA -->
-<div class="header">
-    <img src="logodatamisionera.jpeg" alt="Logo">
+  <!-- ULTIMAS -->
+  <div class="ticker">
+    <span>🔴 ÚLTIMAS | Ola de calor extremo en Posadas | Alerta por altas temperaturas |</span>
+  </div>
+
+  <!-- PORTADA -->
+  <div class="hero">
     <h1>DATA MISIONERA</h1>
-</div>
+  </div>
 
-<!-- MENU -->
-<div class="menu">
+  <!-- MENU -->
+  <nav>
     <a href="#">Clima</a>
     <a href="#">Locales</a>
     <a href="#">Provinciales</a>
@@ -173,67 +151,44 @@ footer img {
     <a href="#">Juventud</a>
     <a href="#">Turismo</a>
     <a href="#">Opinión</a>
-</div>
+  </nav>
 
-<!-- ULTIMAS -->
-<div class="ticker">
-    <p>🔴 ÚLTIMAS | Ola de calor extremo en Misiones | Alerta sanitaria | Cortes de energía en varias localidades</p>
-</div>
+  <!-- CONTENIDO -->
+  <div class="container">
 
-<!-- CONTENIDO -->
-<div class="container">
+    <!-- CLIMA POSADAS -->
+    <div class="clima-box">
+      <h3>🌡️ Clima en Posadas</h3>
+      <p id="temp"></p>
+      <p id="viento"></p>
+      <small>Fuente: estaciones oficiales y modelos meteorológicos (Open-Meteo / NOAA)</small>
+    </div>
 
-<!-- PRINCIPAL -->
-<div class="main">
+    <h2>Noticias destacadas</h2>
+    <p>Acá van las notas (ahora publicamos la primera).</p>
 
-<div class="box">
-<h2>☀️ Clima en Misiones</h2>
-<p id="clima">Cargando clima...</p>
-</div>
+  </div>
 
-<div class="box">
-<h2>📰 Noticias recientes</h2>
-<p><strong>Alerta roja por temperaturas extremas</strong></p>
-<p>El Servicio Meteorológico Nacional advirtió riesgo para la salud.</p>
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© Data Misionera</p>
+    <img src="logodatamisionera.jpeg" alt="Logo Data Misionera">
+  </footer>
 
-</div>
-
-<!-- SIDEBAR -->
-<div class="sidebar">
-
-<div class="box">
-<h2>🔥 Más leídas</h2>
-<ul>
-<li>Ola de calor histórica</li>
-<li>Cortes de luz en Misiones</li>
-<li>Suba de precios</li>
-</ul>
-</div>
-
-<div class="ad">
-ESPACIO PUBLICITARIO
-</div>
-
-</div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-<img src="logodatamisionera.jpeg">
-<p>@datamisionera · WhatsApp 3743 592013</p>
-<p>© Data Misionera</p>
-</footer>
-
-<!-- CLIMA AUTOMÁTICO -->
-<script>
-fetch("https://api.open-meteo.com/v1/forecast?latitude=-27.45&longitude=-55.90&current_weather=true")
-.then(res => res.json())
-.then(data => {
-document.getElementById("clima").innerHTML =
-`${data.current_weather.temperature}°C · Viento ${data.current_weather.windspeed} km/h`;
-});
-</script>
+  <!-- CLIMA AUTOMÁTICO POSADAS -->
+  <script>
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=-27.3671&longitude=-55.8961&current_weather=true")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("temp").innerText =
+          "Temperatura actual: " + data.current_weather.temperature + "°C";
+        document.getElementById("viento").innerText =
+          "Viento: " + data.current_weather.windspeed + " km/h";
+      })
+      .catch(() => {
+        document.getElementById("temp").innerText = "No se pudo cargar el clima";
+      });
+  </script>
 
 </body>
 </html>
