@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Wall Street en rojo</title>
+  <desc id="desc">Ilustración sobria con un gráfico descendente y silueta de edificios.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0b0b" />
+      <stop offset="100%" stop-color="#1a1a1a" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)" />
+  <g opacity="0.6">
+    <rect x="80" y="380" width="160" height="420" fill="#222" />
+    <rect x="260" y="300" width="220" height="500" fill="#252525" />
+    <rect x="500" y="420" width="180" height="380" fill="#202020" />
+    <rect x="700" y="260" width="260" height="540" fill="#242424" />
+    <rect x="980" y="340" width="200" height="460" fill="#222" />
+    <rect x="1200" y="280" width="260" height="520" fill="#262626" />
+  </g>
+  <polyline points="120,220 360,320 580,280 820,420 1100,520 1460,700" fill="none" stroke="#e0423f" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="120" cy="220" r="10" fill="#e0423f" />
+  <circle cx="360" cy="320" r="10" fill="#e0423f" />
+  <circle cx="580" cy="280" r="10" fill="#e0423f" />
+  <circle cx="820" cy="420" r="10" fill="#e0423f" />
+  <circle cx="1100" cy="520" r="10" fill="#e0423f" />
+  <circle cx="1460" cy="700" r="10" fill="#e0423f" />
+  <text x="90" y="120" fill="#f2f2f2" font-family="'Montserrat', Arial, sans-serif" font-size="60" font-weight="700">Wall Street</text>
+  <text x="90" y="190" fill="#cfcfcf" font-family="'Montserrat', Arial, sans-serif" font-size="32">Mercados en baja</text>
+</svg>
